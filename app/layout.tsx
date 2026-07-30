@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   keywords: "software development, web development, mobile apps, custom software, fintech, South Africa, Mesh Innovation Hub",
   authors: [{ name: "Mesh Innovation Hub" }],
   icons: {
-    icon: '/favicon.ico',
+    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" fill="%2322d3ee">M</text></svg>',
   },
   openGraph: {
     title: "Mesh Innovation Hub | Web, Mobile & Software Development",
