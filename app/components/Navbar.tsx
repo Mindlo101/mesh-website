@@ -1,8 +1,6 @@
-// app/components/Navbar.tsx
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -31,18 +29,9 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10">
-              <Image 
-                src="/logo.png"  // Change to your actual filename (e.g., /logo.svg, /logo.png)
-                alt="Mesh Innovation Hub"
-                width={40}
-                height={40}
-                className="object-contain"
-              />
-            </div>
-            <span className="font-bold text-lg tracking-tight">
+          {/* Logo - Simple Text Version */}
+          <Link href="/" className="flex items-center gap-2 group">
+            <span className="text-2xl font-bold tracking-tight">
               Mesh<span className="text-cyan-400">Hub</span>
             </span>
           </Link>

@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -15,6 +14,9 @@ export const metadata: Metadata = {
   description: "Custom websites, mobile apps, and enterprise software built with modern technology. From fintech to logistics—we engineer digital solutions that scale.",
   keywords: "software development, web development, mobile apps, custom software, fintech, South Africa, Mesh Innovation Hub",
   authors: [{ name: "Mesh Innovation Hub" }],
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     title: "Mesh Innovation Hub | Web, Mobile & Software Development",
     description: "Custom websites, mobile apps, and enterprise software built with modern technology.",
@@ -32,12 +34,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body className={`${inter.className} bg-navy-900 text-gray-100 antialiased`}>
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen pt-16">{children}</main>
         <Footer />
       </body>
     </html>

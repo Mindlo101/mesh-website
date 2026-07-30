@@ -1,4 +1,3 @@
-// app/page.tsx
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -8,7 +7,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-mesh bg-grid-pattern">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-mesh">
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse-slow" />
@@ -32,7 +31,7 @@ export default function Home() {
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6">
                 Web, Mobile &{" "}
-                <span className="text-gradient">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
                   Software
                 </span>
                 <br />
@@ -116,74 +115,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="py-20 bg-navy-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What We <span className="text-gradient">Deliver</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Full-cycle development for web, mobile, and enterprise software.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { 
-                title: "Web Development", 
-                desc: "Custom websites, web apps, and portals built with React, Next.js, and modern frameworks.",
-                icon: <Code className="w-8 h-8 text-cyan-400" />,
-                features: ["Responsive Design", "SEO Optimized", "Fast Performance"]
-              },
-              { 
-                title: "Mobile Apps", 
-                desc: "Native and cross-platform apps for iOS and Android using Flutter, React Native, and Swift.",
-                icon: <Smartphone className="w-8 h-8 text-cyan-400" />,
-                features: ["Cross-Platform", "Native Performance", "App Store Ready"]
-              },
-              { 
-                title: "Enterprise Software", 
-                desc: "Custom systems, APIs, and cloud solutions that automate and scale your business.",
-                icon: <Database className="w-8 h-8 text-cyan-400" />,
-                features: ["Scalable", "Secure", "Cloud Ready"]
-              }
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="glass rounded-2xl p-8 hover-lift group"
-              >
-                <div className="mb-4 p-3 bg-cyan-400/10 rounded-xl inline-block group-hover:bg-cyan-400/20 transition-colors">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-400 text-sm mb-4">{item.desc}</p>
-                <ul className="space-y-2">
-                  {item.features.map((feature) => (
-                    <li key={feature} className="text-sm text-gray-300 flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-cyan-400/5 via-blue-500/5 to-transparent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -194,7 +125,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Build Something <span className="text-gradient">Amazing</span>?
+              Ready to Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Amazing</span>?
             </h2>
             <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
               Let's discuss your project and turn your vision into reality.
