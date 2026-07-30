@@ -13,7 +13,16 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Mesh Innovation Hub | Web, Mobile & Software Development",
   description: "Custom websites, mobile apps, and enterprise software built with modern technology. From fintech to logistics—we engineer digital solutions that scale.",
-  keywords: "software development, web development, mobile apps, custom software, fintech, South Africa",
+  keywords: "software development, web development, mobile apps, custom software, fintech, South Africa, Mesh Innovation Hub",
+  authors: [{ name: "Mesh Innovation Hub" }],
+  openGraph: {
+    title: "Mesh Innovation Hub | Web, Mobile & Software Development",
+    description: "Custom websites, mobile apps, and enterprise software built with modern technology.",
+    url: "https://meshinnovationhub.co.za",
+    siteName: "Mesh Innovation Hub",
+    locale: "en_ZA",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -23,6 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={`${inter.className} bg-navy-900 text-gray-100 antialiased`}>
         <Navbar />
         <main className="min-h-screen">{children}</main>
