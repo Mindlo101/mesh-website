@@ -4,27 +4,32 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
-  display: 'swap',
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
   title: "Mesh Innovation Hub | Web, Mobile & Software Development",
-  description: "Custom websites, mobile apps, and enterprise software built with modern technology. From fintech to logistics—we engineer digital solutions that scale.",
-  keywords: "software development, web development, mobile apps, custom software, fintech, South Africa, Mesh Innovation Hub",
+  description:
+    "Mesh Innovation Hub engineers custom web, mobile, and enterprise software for businesses across South Africa. Innovate • Connect • Empower.",
+  keywords:
+    "software development, web development, mobile apps, custom software, South Africa, Free State, Botshabelo, Mesh Innovation Hub",
   authors: [{ name: "Mesh Innovation Hub" }],
   icons: {
-    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" fill="%2322d3ee">M</text></svg>',
+    icon: "/favicon.ico",
   },
   openGraph: {
     title: "Mesh Innovation Hub | Web, Mobile & Software Development",
-    description: "Custom websites, mobile apps, and enterprise software built with modern technology.",
+    description:
+      "Custom web, mobile, and enterprise software built for South African businesses.",
     url: "https://meshinnovationhub.co.za",
     siteName: "Mesh Innovation Hub",
     locale: "en_ZA",
     type: "website",
   },
+  metadataBase: new URL("https://meshinnovationhub.co.za"),
 };
 
 export default function RootLayout({
@@ -34,9 +39,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-navy-900 text-gray-100 antialiased`}>
+      <body
+        className={`${inter.variable} font-sans bg-navy-900 text-gray-100 antialiased`}
+      >
         <Navbar />
-        <main className="min-h-screen pt-16">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
